@@ -1,5 +1,7 @@
 name:CI
 
+on:                  # when developer push the code pipeline get triggered
+      push:
 jobs:   
        build-and-push:
                runs-on: ubantu-latest  #Github Runner
