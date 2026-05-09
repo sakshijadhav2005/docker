@@ -52,7 +52,9 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/your-image-name:latest
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/my-image-name:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/my-image-name:${{ github.sha }}
 
 
 
