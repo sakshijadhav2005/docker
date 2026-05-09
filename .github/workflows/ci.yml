@@ -1,11 +1,11 @@
 name:CI
 
 on:                  # when developer push the code pipeline get triggered
-      push:
-          branches: [main]
+   push:
+       branches: [main]
 jobs:   
-       build-and-push:
-               runs-on: ubantu-latest  #Github Runner
-               steps:
-                      - uses: actions/checkout@v4  #clone the code
-                      - uses: docker/setup-buildx-action@v4
+     build-and-push:
+       runs-on: ubuntu-latest  #Github Runner
+       steps:
+         - uses: actions/checkout@v4  #clone the code
+         - uses: docker/setup-buildx-action@v4
